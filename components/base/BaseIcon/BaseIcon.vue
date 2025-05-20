@@ -1,15 +1,12 @@
 ﻿<script setup lang="ts">
-import type {IBaseIcon} from "~/components/base/BaseIcon/IBaseIcon";
+import { defineProps } from 'vue'
+// https://icones.js.org/ here you can find all the icons and just copy the name
 
-withDefaults(defineProps<IBaseIcon>(),{
-})
+defineProps<{
+  icon: string
+}>()
 </script>
 
 <template>
-
-<component :is="icon" />
+  <Icon :name="icon" />
 </template>
-
-<style scoped>
-
-</style>
