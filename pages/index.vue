@@ -1,6 +1,10 @@
 ﻿<script setup lang="ts">
 import BaseButton from "~/components/base/BaseButton/BaseButton.vue";
 import BaseCheckbox from "~/components/base/BaseCheckbox/BaseCheckbox.vue";
+import BaseIcon from "~/components/base/BaseIcon/BaseIcon.vue";
+import { User } from 'lucide-vue-next'
+import BaseIconBox from "~/components/base/BaseIconBox/BaseIconBox.vue";
+import BaseIconHover from "~/components/base/BaseIconHover/BaseIconHover.vue";
 
 definePageMeta({
   layout: 'main'    // points to layouts/admin.vue
@@ -8,8 +12,11 @@ definePageMeta({
 </script>
 <template>
 <p class="text-heading-h2 ">HOME</p>
-  <BaseButton class="mr-3" variant="primary"/>
+  <BaseButton class="mr-3" variant="default"/>
   <BaseCheckbox />
+  <BaseIcon :icon="User"/>
+  <BaseIconHover :icon="User" />
+  <BaseIconBox :icon="User" :variant="'slate'" />
 </template>
 
 <style scoped>
