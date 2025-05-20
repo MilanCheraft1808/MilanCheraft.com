@@ -6,7 +6,7 @@ defineProps<{
   icon: string
 }>()
 </script>
-
+  
 <template>
   <Icon :name="icon" />
 </template>

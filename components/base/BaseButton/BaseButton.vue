@@ -14,6 +14,8 @@ const colorClasses = {
 
 withDefaults(defineProps<IBaseButton>(),{
   variant: 'default',
+  disabled: false,
+  content: 'Button text'
 })
 
 
@@ -24,6 +26,6 @@ withDefaults(defineProps<IBaseButton>(),{
   <button :class="[
       colorClasses[variant]
   ]" @click="$emit('click')">
-    Button text
+    {{ content }}
   </button>
 </template>
