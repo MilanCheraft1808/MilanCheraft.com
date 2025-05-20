@@ -1,0 +1,60 @@
+﻿@import "tailwindcss";
+
+@theme{
+    /*text size body*/
+    --text-body-sm: 14px;
+    --text-body-md: 16px;
+    --text-body-lg: 18px;
+
+    /*text size headings*/
+    --text-heading-h6: 20px;
+    --text-heading-h5: 24px;
+    --text-heading-h4: 30px;
+    --text-heading-h3: 36px;
+    --text-heading-h2: 48px;
+    --text-heading-h1: 60px;
+
+    /*line height body*/
+    --text-body-sm-line-height: 19,5px;
+    --text-body-md-line-height: 24px;
+    --text-body-lg-line-height: 27px;
+
+    /*line height heading*/
+    --text-heading-h6-line-height: 30px;
+    --text-heading-h5-line-height: 33,6px;
+    --text-heading-h4-line-height: 42px;
+    --text-heading-h3-line-height: 46,8px;
+    --text-heading-h2-line-height: 57,6px;
+    --text-heading-h1-line-height: 66px;
+}
+@layer base{
+    @font-face {
+
+    }
+}
+/*@layer base{*/
+/*    h1{*/
+/*        font-size: var(--text-heading-h1);*/
+/*        line-height: var(--text-heading-h1-line-height);*/
+/*    },*/
+/*    h2{*/
+/*        font-size: var(--text-heading-h2);*/
+/*        line-height: var(--text-heading-h2-line-height);*/
+/*    },*/
+/*    h3{*/
+/*        font-size: var(--text-heading-h3);*/
+/*        line-height: var(--text-heading-h3-line-height);*/
+/*    },*/
+/*    h4{*/
+/*        font-size: var(--text-heading-h4);*/
+/*        line-height: var(--text-heading-h4-line-height);*/
+/*    },*/
+/*    h5{*/
+/*        font-size: var(--text-heading-h5);*/
+/*        line-height: var(--text-heading-h5-line-height);*/
+/*    },*/
+/*    h6{*/
+/*        font-size: var(--text-heading-h6);*/
+/*        line-height: var(--text-heading-h6-line-height);*/
+/*    },*/
+/*}*/
