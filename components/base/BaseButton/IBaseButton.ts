@@ -1,3 +1,4 @@
 ﻿export interface IBaseButton {
-    variant?: 'primary' | 'secondary' | 'tertiary' | 'ghost' | 'link';
+    variant?: 'primary' | 'default' | 'ghost' | 'link' | 'error' | 'success' | 'warning' | 'disabled';
+    isDisabled?: boolean;
 }
