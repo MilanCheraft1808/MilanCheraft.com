@@ -1,6 +1,6 @@
 ﻿<!-- layouts/default.vue -->
 <template>
-  <div class="min-h-screen flex flex-col font-fira">
+  <div class="min-h-screen bg-slate-900 flex flex-col font-fira">
     <Header />
     <main class="flex-1 p-4 ">
       <RouterView/>
