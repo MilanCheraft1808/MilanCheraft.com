@@ -1,16 +1,15 @@
 ﻿<script setup lang="ts">
-import { ref, computed } from 'vue'
-import { useRoute } from 'vue-router'
+import {ref, computed} from 'vue'
+import {useRoute} from 'vue-router'
 
 const navItems = [
-  { label: '_Hello',     to: '/' },
-  { label: '_about-me',  to: '/about' },
-  { label: '_projects',  to: '/projects' },
+  {label: '_Hello', to: '/'},
+  {label: '_about-me', to: '/about'},
+  {label: '_projects', to: '/projects'},
 ]
 const route = useRoute()
 const currentPath = computed(() => route.path)
 
-// NEW: mobile menu open state
 const isOpen = ref(false)
 </script>
 
@@ -19,8 +18,7 @@ const isOpen = ref(false)
     <div class="mx-auto flex border-1 border-b-slate-400 items-center">
       <div class="text-body-md pl-2">Milan Chéraft</div>
       <div class="ml-32">
-        <!-- desktop nav (unchanged) -->
-        <ul class="hidden md:flex border-t border-x border-b-slate-400 divide-x divide-gray-700 rounded-t-lg overflow-hidden">
+        <ul class="hidden md:flex border-x divide-x divide-slate-400 rounded-t-lg overflow-hidden">
           <li v-for="item in navItems" :key="item.to">
             <NuxtLink
                 :to="item.to"
@@ -34,19 +32,17 @@ const isOpen = ref(false)
           </li>
         </ul>
       </div>
-      <div class="ml-auto border-1 border-b-slate-400 flex items-center">
-        <!-- desktop contact link (unchanged) -->
+      <div class="ml-auto flex items-center">
         <NuxtLink
             to="/contact"
-            class="hidden pl-2 pr-2 md:block text-body-md md:text-base py-2 border-b-2 transition-colors"
+            class="hidden pl-2 pr-2 md:block text-body-md md:text-base py-2 border-b-2 border-slate-400 border-l-solid border-l-1 border-l-slate-400 transition-colors"
             :class="currentPath === '/contact'
             ? 'border-b-yellow-500 text-slate-50'
-            : 'border-transparent text-slate-400 hover:text-slate-50'"
+                : 'border-transparent  text-slate-400 hover:text-slate-50 hover:border-gray-700'"
         >
           _contact-me
         </NuxtLink>
 
-        <!-- hamburger -->
         <button
             class="md:hidden text-slate-400 hover:text-slate-50 transition-colors p-2"
             @click="isOpen = true"
@@ -63,21 +59,17 @@ const isOpen = ref(false)
       </div>
     </div>
 
-    <!-- mobile overlay menu -->
-    <!-- mobile overlay menu -->
     <transition name="fade">
       <div
           v-if="isOpen"
           class="fixed inset-0 z-50 bg-slate-900 text-slate-400 flex flex-col p-4"
       >
-        <!-- header with close -->
         <div class="flex items-center justify-between mb-8">
           <div class="text-body-md pl-2">Milan Chéraft</div>
           <button @click="isOpen = false">
             &times;
           </button>
         </div>
-        <!-- nav list with borders -->
         <nav class="flex-grow">
           <ul class="border-t border-b border-b-slate-400 divide-y divide-gray-700 rounded-lg overflow-hidden">
             <li
@@ -104,7 +96,11 @@ const isOpen = ref(false)
 </template>
 
 <style>
-/* simple fade transition—feel free to customize */
-.fade-enter-active, .fade-leave-active { transition: opacity .4s }
-.fade-enter-from, .fade-leave-to { opacity: 0 }
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .4s
+}
+
+.fade-enter-from, .fade-leave-to {
+  opacity: 0
+}
 </style>
