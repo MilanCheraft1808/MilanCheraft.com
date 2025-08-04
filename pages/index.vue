@@ -1,83 +1,55 @@
-﻿<script setup lang="ts">
-import BaseButton from "~/components/base/BaseButton/BaseButton.vue";
-import BaseCheckbox from "~/components/base/BaseCheckbox/BaseCheckbox.vue";
-import BaseIcon from "~/components/base/BaseIcon/BaseIcon.vue";
-import BaseIconBox from "~/components/base/BaseIconBox/BaseIconBox.vue";
-import BaseIconHover from "~/components/base/BaseIconHover/BaseIconHover.vue";
-import BaseImage from "~/components/base/BaseImage/BaseImage.vue";
-import BaseCard from "~/components/base/BaseCard/BaseCard.vue";
-import type {IBaseCard} from "~/components/base/BaseCard/IBaseCard";
-
-definePageMeta({
-  layout: 'main'    // points to layouts/admin.vue
-})
-
-const cardItems: IBaseCard[] = [
-  {
-    description: "First project showcase",
-    image: {
-      imageSource: "/images/project2.jpg",
-      altText: "Project 1 preview",
-    },
-    button: {
-      variant: "default",
-      content: "View Project",
-      to: "/projects/1"
-    },
-    iconBox: {
-      icon: "mdi:nuxt",
-      variant: "teal"
-    }
-  },
-  {
-    description: "First project showcase to practive my Frontend skills",
-    image: {
-      imageSource: "/images/project2.jpg",
-      altText: "Project 1 preview",
-    },
-    button: {
-      variant: "default",
-      content: "View Project",
-      to: "/projects/1"
-    },
-    iconBox: {
-      icon: "mdi:nuxt",
-      variant: "teal"
-    }
-  },
-  {
-    description: "First project showcase",
-    image: {
-      imageSource: "/images/project2.jpg",
-      altText: "Project 1 preview",
-    },
-    button: {
-      variant: "default",
-      content: "View Project",
-      to: "/projects/1"
-    },
-    iconBox: {
-      icon: "mdi:nuxt",
-      variant: "teal"
-    }
-  }
-]
-</script>
-<template>
-  <p class="text-heading-h2 ">HOME</p>
-  <!--  <BaseButton class="mr-3" variant="default" to="/" content="This is a button"/>-->
-  <!--  <BaseCheckbox />-->
-  <!--  <BaseIcon icon="uiw:apple" />-->
-  <!--  <BaseIconHover icon="uiw:apple" />-->
-  <!--  <BaseIconBox icon="uiw:apple" :variant="'slate'" />-->
-  <!--  <BaseImage image-source="/images/image.png"-->
-  <!--             alt-text="test" />-->
-  <section class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-10 w-full p-16">
-    <BaseCard v-for="card in cardItems" :description="card.description" :image="card.image" :button="card.button"
-              :icon-box="card.iconBox"/>
-  </section>
+﻿<template>
+  <div class="homepage-container">
+    <p class="text-heading-h2 cyberpunk-text-h2">Welcome to my own website!</p>
+    <p class="text-heading-h4 cyberpunk-text-h4">This is a work in progress but in the meantime you can play my own snake game! (only on computer and tablet)</p>
+    <game class="hidden md:flex" />
+  </div>
 </template>
 
-<style scoped>
+<script setup lang="ts">
+definePageMeta({
+  layout: 'main'
+})
 
+</script>
+
+<style scoped>
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.cyberpunk-text-h2 {
+  color: #e2e8f0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow:
+      0 0 5px #06b6d4,
+      0 0 10px #06b6d4,
+      0 0 20px rgba(6, 182, 212, 0.8),
+      0 0 30px rgba(6, 182, 212, 0.6);
+  letter-spacing: 2px;
+  animation: pulse-glow 2s infinite alternate;
+}
+
+.cyberpunk-text-h4 {
+  color: #94a3b8;
+  font-size: 1.2rem;
+  text-shadow: 0 0 5px #06b6d4;
+  letter-spacing: 1px;
+}
+
+/* Optional animation for a subtle breathing/pulsing effect */
+@keyframes pulse-glow {
+  0% {
+    text-shadow: 0 0 5px #06b6d4, 0 0 10px #06b6d4;
+  }
+  100% {
+    text-shadow: 0 0 8px #06b6d4, 0 0 15px #06b6d4, 0 0 25px rgba(6, 182, 212, 0.7);
+  }
+}
 </style>
