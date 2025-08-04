@@ -381,7 +381,6 @@ onUnmounted(() => {
   background: linear-gradient(135deg, #06b6d4, #0891b2);
   color: #0f172a;
   box-shadow: 0 0 30px rgba(6, 182, 212, 0.6);
-  transform: translateY(-2px);
 }
 
 .start-btn {
