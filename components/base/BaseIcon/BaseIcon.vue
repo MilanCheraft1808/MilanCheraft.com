@@ -4,9 +4,11 @@ import { defineProps } from 'vue'
 
 defineProps<{
   icon: string
+  color?: string
 }>()
+
 </script>
   
 <template>
-  <Icon :name="icon" />
+  <Icon :name="icon" :class="color" />
 </template>
