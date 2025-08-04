@@ -1,33 +1,14 @@
-﻿<template>
+﻿<script setup lang="ts">
+definePageMeta({
+  layout: 'main'    // points to layouts/admin.vue
+})
+</script>
+
+<template>
   <div class="homepage-container">
-    <p class="text-heading-h2 cyberpunk-text-h2">Welcome to my own website!</p>
-    <p class="text-heading-h4 cyberpunk-text-h4">
-      This is a work in progress but in the meantime you can play my own snake game!
-    </p>
-    <game v-if="shouldShowGame" />
+    <p class="text-heading-h2 cyberpunk-text-h2">This page will be here soon</p>
   </div>
 </template>
-
-<script setup lang="ts">
-import { ref, onMounted, onUnmounted, computed } from 'vue'
-
-// This ref will be updated by the layout when the menu opens/closes
-const isMenuOpen = ref(false)
-const screenWidth = ref(window.innerWidth)
-
-const updateWidth = () => {
-  screenWidth.value = window.innerWidth
-}
-
-onMounted(() => {
-  window.addEventListener('resize', updateWidth)
-})
-
-onUnmounted(() => {
-  window.removeEventListener('resize', updateWidth)
-})
-const shouldShowGame = computed(!isMenuOpen)
-</script>
 
 <style scoped>
 .homepage-container {
@@ -59,6 +40,7 @@ const shouldShowGame = computed(!isMenuOpen)
   letter-spacing: 1px;
 }
 
+/* Optional animation for a subtle breathing/pulsing effect */
 @keyframes pulse-glow {
   0% {
     text-shadow: 0 0 5px #06b6d4, 0 0 10px #06b6d4;
