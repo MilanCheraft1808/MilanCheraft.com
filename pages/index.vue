@@ -4,14 +4,14 @@
       <p class="text-body-lg text-slate-400">Hi all. I am</p>
       <h1 class="text-heading-h1 text-slate-50">Milan Chéraft</h1>
       <h4 class="text-heading-h4 text-indigo-500 pb-32"> > Full Stack Developer</h4>
-      <p class="text-body-md text-slate-400 game">// complete the game to continue</p>
-      <p class="text-body-md text-slate-400">// find my profile on Github:</p>
+      <p class="text-body-md pb-2 text-slate-400 game">// complete the game to continue</p>
+      <p class="text-body-md pb-2 text-slate-400">// find my profile on Github:</p>
       <p class="text-body-md text-slate-400">
         <span class="text-teal-400">const</span>
         <span class="text-indigo-500"> githubLink </span>
         =
-        <a href="https://github.com" target="_blank" class="text-rose-300 underline">
-          "https://github.com"
+        <a href="https://github.com" target="_blank" class="text-rose-300 underline underline-offset-4">
+          "https://github.com/CheraftMilan"
         </a>
       </p>
     </div>
