@@ -1,8 +1,21 @@
 ﻿<template>
-  <div class="homepage-container">
-    <p class="text-heading-h2 cyberpunk-text-h2">Welcome to my own website!</p>
-    <p class="text-heading-h4 cyberpunk-text-h4">This is a work in progress but in the meantime you can play my own snake game! (only on computer and tablet)</p>
-    <game class="hidden md:flex" />
+  <div class="flex items-center justify-center gap-36">
+    <div>
+      <p class="text-body-lg text-slate-400">Hi all. I am</p>
+      <h1 class="text-heading-h1 text-slate-50">Milan Chéraft</h1>
+      <h4 class="text-heading-h4 text-indigo-500 pb-32"> > Full Stack Developer</h4>
+      <p class="text-body-md text-slate-400 game">// complete the game to continue</p>
+      <p class="text-body-md text-slate-400">// find my profile on Github:</p>
+      <p class="text-body-md text-slate-400">
+        <span class="text-teal-400">const</span>
+        <span class="text-indigo-500"> githubLink </span>
+        =
+        <a href="https://github.com" target="_blank" class="text-rose-300 underline">
+          "https://github.com"
+        </a>
+      </p>
+    </div>
+    <game class="game"/>
   </div>
 </template>
 
@@ -27,11 +40,10 @@ definePageMeta({
   color: #e2e8f0;
   font-size: 2.5rem;
   font-weight: bold;
-  text-shadow:
-      0 0 5px #06b6d4,
-      0 0 10px #06b6d4,
-      0 0 20px rgba(6, 182, 212, 0.8),
-      0 0 30px rgba(6, 182, 212, 0.6);
+  text-shadow: 0 0 5px #06b6d4,
+  0 0 10px #06b6d4,
+  0 0 20px rgba(6, 182, 212, 0.8),
+  0 0 30px rgba(6, 182, 212, 0.6);
   letter-spacing: 2px;
   animation: pulse-glow 2s infinite alternate;
 }
@@ -52,4 +64,10 @@ definePageMeta({
     text-shadow: 0 0 8px #06b6d4, 0 0 15px #06b6d4, 0 0 25px rgba(6, 182, 212, 0.7);
   }
 }
+@media (max-width: 1250px) {
+  .game{
+    display: none;
+  }
+}
+
 </style>

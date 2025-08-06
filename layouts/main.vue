@@ -2,7 +2,7 @@
 <template>
   <div class="min-h-screen bg-slate-900 flex flex-col font-fira">
     <Header />
-    <main class="flex-1 p-4 ">
+    <main class="flex-1 p-4 content-center ">
       <RouterView/>
     </main>
     <Footer />
